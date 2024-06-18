@@ -31,18 +31,11 @@ class WebhooksController extends Controller
      */
     public function index($request)
     {
-        $data = 
-        Webhook::select('webhooks.id', 
-                        'webhooks.webhookId', 
-                        'webhooks.shopId', 
-                        'webhooks.url', 
-                        'webhooks.tipo', 
-                        'webhooks.state',
-                        'stores.shop')
-                        ->join('stores', 'webhooks.shopId', '=', 'stores.id')
-                        ->where('webhooks.shopId', $request)
-            ->get();
-#dd($data[0]->id);
+
+		$data = DB::table('webhooks')
+			->leftJoin('woo_tiendas', 'webhooks.shopId', '=', 'woo_tiendas.id')
+			->where('webhooks.shopId', $request)
+			->get();
 
         return view('admin.webhook.index', ['data' => $data]);
     }

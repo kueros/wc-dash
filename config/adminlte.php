@@ -332,7 +332,7 @@ return [
 		],
 		[
 			'text' => 'stores',
-			'url' => 'stores',
+			'url' => 'woo_tiendas',
 			'icon' => 'fas fa-store',
 		],
 		[

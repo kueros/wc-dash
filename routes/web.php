@@ -56,9 +56,9 @@ Route::prefix('webhooks')->namespace('App\Http\Controllers')->name('webhooks/')-
 	Route::get('/{id}', 'WebhooksController@index')->name('index');
 });
 
-Route::prefix('stores')->namespace('App\Http\Controllers')->name('stores/')->middleware('auth')->group(static function () {
-	Route::get('/', 'StoresController@index')->name('index');
-	Route::get('/show/{id}', 'StoresController@show')->name('show');
+Route::prefix('woo_tiendas')->namespace('App\Http\Controllers')->name('woo_tiendas/')->middleware('auth')->group(static function () {
+	Route::get('/', 'WooTiendaController@index')->name('index');
+	Route::get('/show/{id}', 'WooTiendaController@show')->name('show');
 });
 
 Route::prefix('carriers')->namespace('App\Http\Controllers')->name('carriers/')->middleware('auth')->group(static function() {

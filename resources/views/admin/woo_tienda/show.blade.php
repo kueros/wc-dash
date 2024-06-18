@@ -20,23 +20,23 @@
 				<div class="card-body bg-white">
 					<div class="form-group mb-2 mb20">
 						<strong>Nombre:</strong>
-						{{ $store->shop }}
+						{{ $woo_tiendas->shop }}
 					</div>
 					<div class="form-group mb-2 mb20">
 						<strong>Cuit:</strong>
-						{{ $store->cuit }}
+						{{ $woo_tiendas->cuit }}
 					</div>
 					<div class="form-group mb-2 mb20">
 						<strong>Estado:</strong>
-						{{ $store->state }}
+						{{ $woo_tiendas->state }}
 					</div>
 					<div class="form-group mb-2 mb20">
 						<strong>Token:</strong>
-						{{ $store->token }}
+						{{ $woo_tiendas->token }}
 					</div>
 					<div class="form-group mb-2 mb20">
 						<strong>Shopify Cli ID:</strong>
-						{{ $store->cli_id }}
+						{{ $woo_tiendas->cli_id }}
 					</div>
 
 				</div>

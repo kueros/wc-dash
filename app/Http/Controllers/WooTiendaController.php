@@ -112,13 +112,13 @@ class WooTiendaController extends Controller
 	 * @throws AuthorizationException
 	 * @return void
 	 */
-	public function show($store)
+	public function show($woo_tienda_id)
 	{
 		#$this->authorize('admin.store.show', $store);
 		#dd($store);
-		$woo_tiendas = Store::find($store);
-		return view('admin.store.show', [
-			'store' => $woo_tiendas,
+		$woo_tiendas = WooTienda::find($woo_tienda_id);
+		return view('admin.woo_tienda.show', [
+			'woo_tiendas' => $woo_tiendas,
 		]);
 
 		// TODO your code goes here
